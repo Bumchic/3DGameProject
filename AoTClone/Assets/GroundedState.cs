@@ -2,17 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GroundedState : MonoBehaviour
+public class GroundedState :State, GroundStateInterface
 {
-    // Start is called before the first frame update
-    void Start()
+    public void GroundMovement()
     {
-        
+        throw new System.NotImplementedException();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Jump()
     {
-        
+        throw new System.NotImplementedException();
+    }
+
+    public void PullRope()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void ShootRope()
+    {
+        throw new System.NotImplementedException();
     }
 }

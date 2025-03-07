@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface CharacterInterface
+public interface GroundStateInterface
 {
 
     //Cho tr?ng thái ? d??i ??t
