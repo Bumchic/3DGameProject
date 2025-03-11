@@ -13,7 +13,11 @@ public class CharacterAttribute : MonoBehaviour
     }
     public void Update()
     {
-        
+        characterStateMachine.CurrentState.GameUpdate();
+    }
+    public void FixedUpdate()
+    {
+        characterStateMachine.CurrentState.FixUpdate();
     }
     public void Start()
     {
