@@ -10,6 +10,7 @@ public interface GroundStateInterface
     public void Jump(); //LOC
     public void ShootRope(); //HaoNam
     public void PullRope(); //ThanhNam
+    public void ResetPosition();//Minh
     //PullRope S? chuy?n qua tr?ng thái ?ang trên không trung?
 
 }

@@ -5,10 +5,6 @@ using UnityEngine;
 public class CharacterStateMachine
 {
     public State CurrentState;
-    public CharacterStateMachine(State currentState)
-    {
-        Initialize(currentState);
-    }
 
     public void ChangeState(State NextState)
     {

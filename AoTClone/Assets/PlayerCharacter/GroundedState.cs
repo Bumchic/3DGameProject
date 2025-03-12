@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GroundedState :State, GroundStateInterface
 {
+
     public GroundedState(CharacterStateMachine characterStateMachine, CharacterAttribute character) : base(characterStateMachine, character)
     {
 
@@ -27,6 +28,7 @@ public class GroundedState :State, GroundStateInterface
     public override void GameUpdate()
     {
         base.GameUpdate();
+        ResetPosition();
     }
 
     public void GroundMovement()
@@ -42,6 +44,16 @@ public class GroundedState :State, GroundStateInterface
     public void PullRope()
     {
         throw new System.NotImplementedException();
+    }
+
+    public void ResetPosition()
+    {
+        if(!Input.GetKeyDown(KeyCode.P))
+        {
+            return;
+        }
+        Debug.Log("ahh");
+        character.transform.position = character.RespawnLocation.position;
     }
 
     public void ShootRope()

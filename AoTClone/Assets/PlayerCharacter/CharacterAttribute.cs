@@ -6,9 +6,10 @@ public class CharacterAttribute : MonoBehaviour
 {
     public CharacterStateMachine characterStateMachine { get; set; }
     public GroundedState groundedState { get; set; }
+    [field: SerializeField] public Transform RespawnLocation { get; set; }
     public void Awake()
     {
-        characterStateMachine = new CharacterStateMachine(groundedState);
+        characterStateMachine = new CharacterStateMachine();
         groundedState = new GroundedState(characterStateMachine, this);
     }
     public void Update()
@@ -21,6 +22,6 @@ public class CharacterAttribute : MonoBehaviour
     }
     public void Start()
     {
-        
+        characterStateMachine.Initialize(groundedState);
     }
 }
