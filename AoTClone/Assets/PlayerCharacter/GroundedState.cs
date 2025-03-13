@@ -52,7 +52,6 @@ public class GroundedState :State, GroundStateInterface
         {
             return;
         }
-        Debug.Log("ahh");
         character.transform.position = character.RespawnLocation.position;
     }
 
