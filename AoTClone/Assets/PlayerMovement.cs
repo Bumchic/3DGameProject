@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 5f;
     public float mouseSensitivity = 2f;
     private bool isGrounded;
-    public Transform playerCamera;
     private float verticalRotation = 0f;
     private float horizontalRotation = 0f;
     public Vector3 cameraOffset = new Vector3(0, 1.6f, 0); // Vị trí camera so với player
@@ -22,13 +21,13 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = false;
 
         // Đặt vị trí camera ban đầu
-        playerCamera.position = transform.position + cameraOffset;
+        //playerCamera.position = transform.position + cameraOffset;
     }
 
     void LateUpdate()
     {
         // Cập nhật vị trí camera theo player
-        playerCamera.position = transform.position + cameraOffset;
+        //playerCamera.position = transform.position + cameraOffset;
     }
 
     void Update()
@@ -44,8 +43,6 @@ public class PlayerMovement : MonoBehaviour
         // Quay camera trái/phải
         horizontalRotation += mouseX;
         
-        // Áp dụng cả hai góc quay
-        playerCamera.rotation = Quaternion.Euler(verticalRotation, horizontalRotation, 0f);
         
         // Quay player theo hướng nhìn camera
         transform.rotation = Quaternion.Euler(0f, horizontalRotation, 0f);
